@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit</title>
+</head>
+<body>
+    <div class="content">
+        <form method="POST">
+            {% csrf_token %}
+
+            <label for="">ведите  имя</label>
+            <input type="text" name="name" id="" value="{{ user.name }}">
+            <label for="">ведите сколько вам лет</label>
+            <input type="number" name="age" id="" value="{{ user.age }}">
+            <input type="submit" value="сохранить">
+        </form>
+    </div>
+</body>
+</html>
